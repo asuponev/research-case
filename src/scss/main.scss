@@ -208,10 +208,10 @@ body {
 }
 
 .metrics {
-  margin: 156px 0 208px;
+  margin: 156px 0 180px;
   display: flex;
   flex-direction: column;
-  gap: 172px;
+  gap: 168px;
 
   &__demography {
     display: grid;
@@ -222,7 +222,7 @@ body {
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      gap: 27px;
+      gap: 31px;
       margin-top: 10px;
 
       &-item {
@@ -258,8 +258,9 @@ body {
 
         span {
           position: absolute;
-          top: -50px;
+          top: -45px;
           right: 0;
+          font-weight: 500;
         }
       }
     }
@@ -289,13 +290,13 @@ body {
     grid-template-columns: 1fr 1fr;
     align-items: center;
     gap: 30px;
-    padding: 64px 40px 40px;
+    padding: 68px 40px 40px;
 
     &-illustration {
       display: flex;
       align-items: center;
       justify-content: flex-start;
-      gap: 13px;
+      gap: 10px;
       position: relative;
 
       &-item {
@@ -320,7 +321,7 @@ body {
         width: 26px;
         height: 41px;
         bottom: -25px;
-        left: calc(228px * 2 + 13px - 35px); // button width * 2 + gap - diff
+        left: calc(228px * 2 + 13px - 36px); // button width * 2 + gap - diff
       }
     }
   }
@@ -328,7 +329,7 @@ body {
   &__other {
     display: flex;
     flex-direction: column;
-    gap: 108px;
+    gap: 112px;
 
     &-title {
       font: $font-h2-gilroy;
@@ -342,14 +343,174 @@ body {
     &-items {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 34px;
+      gap: 28px;
     }
 
     &-item {
       display: flex;
       flex-direction: column;
       letter-spacing: -1px;
-      padding-left: 46px;
+      padding-left: 44px;
+    }
+  }
+}
+
+.synopsis {
+  display: flex;
+  flex-direction: column;
+  gap: 360px;
+
+  &__audit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 170px;
+
+    &-text {
+      text-align: left;
+      max-width: 870px;
+    }
+
+    &-numbers {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      padding: 0 48px;
+
+      &-item {
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+      }
+
+      &-largenumber {
+        font: $font-large-gilroy;
+        color: $color-white;
+        -webkit-text-stroke: 1px $color-secondary;
+      }
+    }
+  }
+
+  &__competitive {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 180px;
+
+    &-text {
+      margin: 6px 0 0 8px;
+      text-align: left;
+      max-width: 870px;
+      letter-spacing: -1%;
+    }
+
+    &-items {
+      display: flex;
+      gap: 31px;
+      margin-bottom: 16px;
+
+      &-item {
+        width: 190px;
+        height: 190px;
+        border: 1px solid $color-secondary;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        span {
+          font: $font-small-gilroy;
+        }
+
+        &#competitive-geyser {
+          border: none;
+          background: url("../img/icons/logo-geyser.svg") no-repeat center;
+          height: 180px;
+        }
+      }
+    }
+  }
+
+  &__poll {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 180px;
+
+    &-text {
+      text-align: left;
+      max-width: 855px;
+      letter-spacing: -1%;
+    }
+
+    &-illustrate {
+      display: flex;
+      justify-content: center;
+      gap: 180px;
+      width: 100%;
+      height: 500px;
+
+      &-polls {
+        position: relative;
+      }
+
+      &-image {
+        width: 254px;
+        height: 254px;
+        align-self: center;
+
+        img {
+          width: 254px;
+          height: 254px;
+        }
+      }
+    }
+  }
+}
+
+.poll {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 432px;
+  height: 286px;
+  padding: 42px 48px;
+  font: $font-small-gilroy;
+  line-height: 1.6;
+  transform: rotate(-3deg);
+  background-color: $color-card1;
+  border-radius: 35px;
+
+  &#poll-absolute {
+    background-color: $color-card2;
+    transform: rotate(-1deg);
+    position: absolute;
+    top: 210px;
+    right: -52px;
+  }
+
+  &__question {
+    font-weight: 600;
+  }
+
+  &__answers {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  &__answer {
+    display: flex;
+    gap: 10px;
+
+    input[type="radio"] {
+      width: 20px;
+      accent-color: $color-secondary;
+      cursor: pointer;
+    }
+
+    label {
+      cursor: pointer;
     }
   }
 }
