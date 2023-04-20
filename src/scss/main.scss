@@ -11,7 +11,6 @@
 body {
   font: $font-body;
   color: $color-text-body;
-  background-color: $color-background-body;
 }
 
 .container {
@@ -22,7 +21,7 @@ body {
 .hero {
   &__wrapper {
     position: relative;
-    overflow: hidden;
+    // overflow: hidden;
   }
 
   &__content {
@@ -93,7 +92,6 @@ body {
   &__title {
     font: $font-h2-gilroy;
     text-align: center;
-    letter-spacing: -1.2px;
 
     &--italic {
       font: $font-h2-playfair;
@@ -106,7 +104,7 @@ body {
   grid-template-columns: 1fr 1fr;
   grid-column-gap: 32px;
   grid-row-gap: 96px;
-  padding: 170px 0;
+  margin: 170px 0 155px;
 
   &__item {
     display: flex;
@@ -129,5 +127,83 @@ body {
       }
     }
 
+  }
+}
+
+.works {
+  position: relative;
+  height: 1154px;
+  margin: 206px 16px 155px;
+
+  &__item {
+    position: absolute;
+    border: 1px solid $color-border;
+    border-radius: 50%;
+    background-color: $color-white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 274px;
+    height: 274px;
+    z-index: 2;
+
+    span {
+      padding: 30px;
+    }
+
+    &#work_1 {
+      width: 426px;
+      height: 426px;
+      top: 0;
+      left: 92px;
+    }
+
+    &#work_2 {
+      width: 164px;
+      height: 164px;
+      top: 76px;
+      right: 249px;
+    }
+
+    &#work_3 {
+      width: 598px;
+      height: 598px;
+      top: 214px;
+      left: 50%;
+      transform: translate(-50%, 0);
+      z-index: 1;
+
+      span {
+        padding: 86px;
+      }
+    }
+
+    &#work_4 {
+      top: 214px;
+      right: 0;
+    }
+
+    &#work_5 {
+      bottom: 399px;
+      left: 0;
+    }
+
+    &#work_6 {
+      width: 426px;
+      height: 426px;
+      bottom: 163px;
+      right: 43px;
+
+      span {
+        padding: 60px;
+      }
+    }
+
+    &#work_7 {
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%, 0);
+    }
   }
 }
