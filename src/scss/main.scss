@@ -1,6 +1,79 @@
+@import "./fonts.scss";
+@import "./variables.scss";
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
+}
+
+body {
+  font: $font-body;
+  color: $color-text-body;
+  background-color: $color-background-body;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.hero {
+  &__wrapper {
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 586px;
+    padding: 262px 292px;
+  }
+
+  &__title {
+    font: $font-h1-gilroy;
+    text-align: center;
+    letter-spacing: -4px;
+    line-height: 255px;
+
+    &--italic {
+      font: $font-h1-playfair;
+      font-family: 'Playfair Display', serif;
+    }
+  }
+
+  &__bubbles {
+    position: relative;
+
+    #bubble_1 {
+      position: absolute;
+      top: 50px;
+      right: -50px;
+      transform: rotate(-30deg);
+    }
+
+    #bubble_2 {
+      position: absolute;
+      top: 320px;
+      left: -110px;
+      transform: rotate(-36.32deg);
+    }
+
+    #bubble_3 {
+      position: absolute;
+      top: 190px;
+      left: 170px;
+      transform: rotate(-16.76deg);
+    }
+
+    #bubble_4 {
+      position: absolute;
+      top: 550px;
+      right: 290px;
+      transform: rotate(-36.24deg);
+    }
+  }
 }
