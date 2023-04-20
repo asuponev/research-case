@@ -10,7 +10,7 @@
 
 body {
   font: $font-body;
-  color: $color-text-body;
+  color: $color-main;
 }
 
 .container {
@@ -111,10 +111,10 @@ body {
     align-items: flex-start;
     gap: 27px;
 
-    &_icon {
+    &-icon {
       min-width: 83px;
       height: 83px;
-      border: 1px solid $color-border;
+      border: 1px solid $color-secondary;
       border-radius: 50%;
       display: flex;
       align-items: center;
@@ -126,18 +126,17 @@ body {
         height: 44px;
       }
     }
-
   }
 }
 
 .works {
   position: relative;
   height: 1154px;
-  margin: 206px 16px 155px;
+  margin: 206px 16px 208px;
 
   &__item {
     position: absolute;
-    border: 1px solid $color-border;
+    border: 1px solid $color-secondary;
     border-radius: 50%;
     background-color: $color-white;
     display: flex;
@@ -204,6 +203,153 @@ body {
       bottom: 0;
       left: 50%;
       transform: translate(-50%, 0);
+    }
+  }
+}
+
+.metrics {
+  margin: 156px 0 208px;
+  display: flex;
+  flex-direction: column;
+  gap: 172px;
+
+  &__demography {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+
+    &-graph {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 27px;
+      margin-top: 10px;
+
+      &-item {
+        display: flex;
+        align-items: center;
+        width: 100%;
+      }
+
+      &-icon {
+        width: 132px;
+        height: 132px;
+        border: 1px solid $color-main;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      &-line {
+        background-color: $color-main;
+        height: 12px;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        position: relative;
+
+        &#graph-progress-70 {
+          width: calc((100% - 132px) * 0.7);
+        }
+
+        &#graph-progress-30 {
+          width: calc((100% - 132px) * 0.3);
+        }
+
+        span {
+          position: absolute;
+          top: -50px;
+          right: 0;
+        }
+      }
+    }
+  }
+
+  &__region {
+    display: flex;
+    flex-direction: column;
+    gap: 39px;
+    align-items: center;
+    justify-content: center;
+
+    &-icon {
+      background: url("../img/icons/location.svg") no-repeat center;
+      width: 50px;
+      height: 80px;
+    }
+
+    &-text {
+      max-width: 619px;
+      text-align: center;
+    }
+  }
+
+  &__browser {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 30px;
+    padding: 64px 40px 40px;
+
+    &-illustration {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 13px;
+      position: relative;
+
+      &-item {
+        width: 228px;
+        height: 91px;
+        border: 1px solid $color-secondary;
+        border-radius: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font: $font-button-gilroy;
+
+        &_active {
+          background-color: $color-secondary;
+          color: $color-white;
+        }
+      }
+
+      &-icon {
+        position: absolute;
+        background: url("../img/icons/cursor.svg") no-repeat center;
+        width: 26px;
+        height: 41px;
+        bottom: -25px;
+        left: calc(228px * 2 + 13px - 35px); // button width * 2 + gap - diff
+      }
+    }
+  }
+
+  &__other {
+    display: flex;
+    flex-direction: column;
+    gap: 108px;
+
+    &-title {
+      font: $font-h2-gilroy;
+      text-align: center;
+
+      &--italic {
+        font: $font-h2-playfair;
+      }
+    }
+
+    &-items {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 34px;
+    }
+
+    &-item {
+      display: flex;
+      flex-direction: column;
+      letter-spacing: -1px;
+      padding-left: 46px;
     }
   }
 }
