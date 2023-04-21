@@ -1,5 +1,6 @@
 @import "./fonts.scss";
 @import "./variables.scss";
+@import "./animate.scss";
 
 * {
   padding: 0;
@@ -30,6 +31,7 @@ body {
     text-align: center;
     letter-spacing: -4px;
     line-height: 255px;
+    animation: 3s 1 alternate activeOpacity;
 
     &--italic {
       font: $font-h1-playfair;
@@ -41,38 +43,46 @@ body {
 
     #bubble_1 {
       position: absolute;
+      z-index: 2;
       top: -210px;
       right: -50px;
       transform: rotate(-30deg);
       width: 511px;
       height: 660px;
+      animation: 2s 1 alternate drop_bubble_1;
     }
 
     #bubble_2 {
       position: absolute;
+      z-index: 2;
       top: 60px;
       left: -110px;
       transform: rotate(-36.32deg);
       width: 526px;
       height: 615px;
+      animation: 1s 1 alternate drop_bubble_2;
     }
 
     #bubble_3 {
       position: absolute;
+      z-index: 2;
       top: -60px;
       left: 170px;
       transform: rotate(-16.76deg);
       width: 217px;
       height: 220px;
+      animation: 2s 1 alternate drop_bubble_3;
     }
 
     #bubble_4 {
       position: absolute;
+      z-index: 2;
       top: 285px;
       right: 290px;
       transform: rotate(-36.24deg);
       width: 183px;
       height: 203px;
+      animation: 1s 1 alternate drop_bubble_4;
     }
   }
 }
@@ -415,6 +425,12 @@ body {
     font: $font-large-gilroy;
     color: $color-white;
     -webkit-text-stroke: 1px $color-secondary;
+    // text-shadow:
+    //   1px 1px 0 $color-secondary,
+    //   -1px -1px 0 $color-secondary,
+    //   1px -1px 0 $color-secondary,
+    //   -1px 1px 0 $color-secondary,
+    //   1px 1px 0 $color-secondary;
   }
 
   &__text {

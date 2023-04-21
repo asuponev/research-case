@@ -1,0 +1,65 @@
+@keyframes activeOpacity {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes drop_bubble_1 {
+  from {
+    top: -710px;
+    right: -40px;
+    transform: rotate(-50deg);
+  }
+
+  to {
+    top: -210px;
+    right: -50px;
+    transform: rotate(-30deg);
+  }
+}
+
+@keyframes drop_bubble_2 {
+  0% {
+    top: -410px;
+    right: -40px;
+    transform: rotate(50deg);
+  }
+
+  100% {
+    top: 60px;
+    left: -110px;
+    transform: rotate(-36.32deg);
+  }
+}
+
+@keyframes drop_bubble_3 {
+  0% {
+    top: -510px;
+    right: -40px;
+    transform: rotate(50deg);
+  }
+
+  100% {
+    top: -60px;
+    left: 170px;
+    transform: rotate(-16.76deg);
+  }
+}
+
+@keyframes drop_bubble_4 {
+  0% {
+    top: 180px;
+    right: 240px;
+    transform: rotate(-50deg);
+  }
+
+  100% {
+    top: 285px;
+    right: 290px;
+    transform: rotate(-36.24deg);
+  }
+}
