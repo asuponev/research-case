@@ -21,15 +21,8 @@ body {
 .hero {
   &__wrapper {
     position: relative;
+    padding: 262px 0 500px;
     // overflow: hidden;
-  }
-
-  &__content {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 586px;
-    padding: 262px 292px;
   }
 
   &__title {
@@ -48,7 +41,7 @@ body {
 
     #bubble_1 {
       position: absolute;
-      top: 50px;
+      top: -210px;
       right: -50px;
       transform: rotate(-30deg);
       width: 511px;
@@ -57,7 +50,7 @@ body {
 
     #bubble_2 {
       position: absolute;
-      top: 320px;
+      top: 60px;
       left: -110px;
       transform: rotate(-36.32deg);
       width: 526px;
@@ -66,7 +59,7 @@ body {
 
     #bubble_3 {
       position: absolute;
-      top: 190px;
+      top: -60px;
       left: 170px;
       transform: rotate(-16.76deg);
       width: 217px;
@@ -75,7 +68,7 @@ body {
 
     #bubble_4 {
       position: absolute;
-      top: 550px;
+      top: 285px;
       right: 290px;
       transform: rotate(-36.24deg);
       width: 183px;
@@ -86,7 +79,26 @@ body {
 
 .section {
   &__wrapper {
-    padding: 70px;
+    padding: 85px 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 110px;
+
+    &_dark {
+      background: $color-main;
+      color: $color-white;
+      padding: 108px 70px 245px;
+      border-radius: 55px;
+    }
+
+    &_p86 {
+      padding: 85px 86px;
+    }
+
+    &_gap120 {
+      gap: 120px;
+    }
   }
 
   &__title {
@@ -96,6 +108,44 @@ body {
     &--italic {
       font: $font-h2-playfair;
     }
+
+    &_dark {
+      color: $color-white;
+    }
+  }
+
+  &__text {
+    text-align: left;
+    max-width: 635px;
+
+    &_center {
+      max-width: 857px;
+    }
+
+    &_compact {
+      letter-spacing: -0.6px;
+    }
+  }
+
+  &__block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    width: 100%;
+
+    &-item {
+      &-center {
+        justify-self: center;
+      }
+
+      &-left {
+        justify-self: left;
+      }
+    }
+
+    &_gap100 {
+      gap: 100px;
+    }
   }
 }
 
@@ -104,7 +154,7 @@ body {
   grid-template-columns: 1fr 1fr;
   grid-column-gap: 32px;
   grid-row-gap: 96px;
-  margin: 170px 0 155px;
+  margin: 55px 0 125px;
 
   &__item {
     display: flex;
@@ -132,7 +182,8 @@ body {
 .works {
   position: relative;
   height: 1154px;
-  margin: 206px 16px 208px;
+  margin: 100px 0 175px;
+  width: 100%;
 
   &__item {
     position: absolute;
@@ -208,7 +259,7 @@ body {
 }
 
 .metrics {
-  margin: 156px 0 180px;
+  margin: 46px 0 150px;
   display: flex;
   flex-direction: column;
   gap: 168px;
@@ -223,7 +274,7 @@ body {
       flex-direction: column;
       align-items: flex-start;
       gap: 32px;
-      margin-top: 5px;
+      margin-top: 7px;
 
       &-item {
         display: flex;
@@ -355,306 +406,165 @@ body {
   }
 }
 
-.analytics {
+.audit {
   display: flex;
   flex-direction: column;
-  gap: 358px;
+  align-items: flex-start;
 
-  &__audit {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 170px;
-
-    &-text {
-      text-align: left;
-      max-width: 857px;
-    }
-
-    &-numbers {
-      display: flex;
-      justify-content: space-between;
-      width: 100%;
-      padding: 0 48px;
-
-      &-item {
-        display: flex;
-        flex-direction: column;
-        gap: 7px;
-      }
-
-      &-largenumber {
-        font: $font-large-gilroy;
-        color: $color-white;
-        -webkit-text-stroke: 1px $color-secondary;
-      }
-    }
+  &__number {
+    font: $font-large-gilroy;
+    color: $color-white;
+    -webkit-text-stroke: 1px $color-secondary;
   }
 
-  &__competitive {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 180px;
-
-    &-text {
-      margin: 6px 0 0 6px;
-      text-align: left;
-      max-width: 857px;
-    }
-
-    &-items {
-      display: flex;
-      gap: 31px;
-      margin-bottom: 16px;
-
-      &-item {
-        width: 190px;
-        height: 190px;
-        border: 1px solid $color-secondary;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        span {
-          font: $font-small-gilroy;
-        }
-
-        &#competitive-geyser {
-          border: none;
-          background: url("../img/icons/logo-geyser.svg") no-repeat center;
-          height: 180px;
-        }
-      }
-    }
+  &__text {
+    min-height: 104px;
+    padding: 10px 8px;
   }
+}
 
-  &__poll {
+.competitive {
+  display: flex;
+  gap: 31px;
+  margin: 70px 0 205px;
+
+  &__item {
+    width: 190px;
+    height: 190px;
+    border: 1px solid $color-secondary;
+    border-radius: 50%;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    gap: 180px;
+    justify-content: center;
 
-    &-text {
-      text-align: left;
-      max-width: 857px;
-      letter-spacing: -0.17px;
+    span {
+      font: $font-small-gilroy;
     }
 
-    &-illustrate {
-      display: flex;
-      justify-content: center;
-      gap: 180px;
-      width: 100%;
-      height: 686px;
-
-      &-polls {
-        position: relative;
-      }
-
-      &-image {
-        width: 254px;
-        height: 254px;
-        align-self: center;
-        margin-bottom: 220px;
-
-        img {
-          width: 254px;
-          height: 254px;
-        }
-      }
+    &_geyser {
+      border: none;
+      height: 180px;
     }
   }
 }
 
 .poll {
   display: flex;
-  flex-direction: column;
-  gap: 32px;
-  width: 432px;
-  height: 286px;
-  padding: 42px 48px;
-  font: $font-small-gilroy;
-  line-height: 1.6;
-  transform: rotate(-3deg);
-  background-color: $color-card1;
-  border-radius: 35px;
+  justify-content: center;
+  gap: 180px;
+  width: 100%;
+  height: 500px;
+  margin-bottom: 150px;
 
-  &#poll-absolute {
-    background-color: $color-card2;
-    transform: rotate(-1deg);
-    position: absolute;
-    top: 210px;
-    right: -52px;
-  }
-
-  &__question {
-    font-weight: 600;
-  }
-
-  &__answers {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  &__answer {
-    display: flex;
-    gap: 10px;
-
-    input[type=radio] {
-      width: 20px;
-      accent-color: $color-secondary;
-      cursor: pointer;
-      background-color: $color-card1;
-    }
-
-    label {
-      cursor: pointer;
-    }
-  }
-}
-
-.uxtest {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 120px;
-  margin: 130px 0 116px;
-
-  &__content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 140px;
-    width: 100%;
-  }
-
-  &__text {
-    text-align: left;
-    max-width: 857px;
-
-    &_cjm {
-      max-width: 635px;
-      letter-spacing: -0.4px;
-    }
-
-    &_space {
-      letter-spacing: -0.6px;
-    }
-
-    &:last-child {
-      margin-top: 10px;
-    }
-  }
-
-  &__cjm {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    width: 100%;
-    gap: 182px;
-    padding: 80px 0 65px;
-
-    &-cards {
-      position: relative;
-    }
-  }
-
-  &__browser {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 7px;
-    width: 857px;
-    height: 42px;
-    background: $color-card1;
-    font: $font-small-gilroy;
-    border-radius: 6px;
-    padding: 14px 20px;
+  &__illustrate {
     position: relative;
-    margin: 8px 0 30px;
-
-    &-text {
-      font: $font-browser;
-      color: $color-black;
-    }
-
-    &-lock {
-      width: 9px;
-      height: 13px;
-    }
-
-    &-reload {
-      width: 12px;
-      height: 14px;
-      margin-left: calc(50% - 58px);
-    }
-
-    &-cursor {
-      width: 25px;
-      height: 39px;
-      position: absolute;
-      top: 30px;
-      left: calc(50% + 41px);
-    }
   }
 
-  &__summary {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 28px;
-      margin-top: 12px;
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    width: 432px;
+    height: 286px;
+    padding: 42px 48px;
+    font: $font-small-gilroy;
+    line-height: 1.6;
+    transform: rotate(-3deg);
+    background-color: $color-card1;
+    border-radius: 35px;
 
-    &-item {
+    &#poll-absolute {
+      background-color: $color-card2;
+      transform: rotate(-1deg);
+      position: absolute;
+      top: 210px;
+      right: -52px;
+    }
+
+    &-question {
+      font-weight: 600;
+    }
+
+    &-answers {
       display: flex;
       flex-direction: column;
-      letter-spacing: -0.5px;
-      padding-left: 42px;
+      gap: 15px;
+    }
+
+    &-answer {
+      display: flex;
+      gap: 10px;
+
+      input[type=radio] {
+        width: 20px;
+        accent-color: $color-secondary;
+        cursor: pointer;
+        background-color: $color-card1;
+      }
+
+      label {
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__img {
+    width: 254px;
+    height: 254px;
+    align-self: center;
+
+    img {
+      width: 254px;
+      height: 254px;
     }
   }
 }
 
-.cjmcard {
-  width: 390px;
-  height: 517px;
-  background: $color-white;
-  border-radius: 35px;
-  display: flex;
-  flex-direction: column;
-  gap: 50px;
-  color: $color-black;
+.cjm {
+  position: relative;
+  padding-right: 75px;
+  margin-bottom: 55px;
 
-  &#cjmcard_1 {
-    background: $color-card3;
-    transform: rotate(-6deg);
-  }
-
-  &#cjmcard_2 {
-    position: absolute;
-    background: $color-card1;
-    transform: rotate(-4deg);
-    z-index: 2;
-    top: 0;
-    left: 25px;
-  }
-
-  &#cjmcard_3 {
-    position: absolute;
+  &__card {
+    width: 390px;
+    height: 517px;
     background: $color-white;
-    transform: rotate(-1deg);
-    border: 1px solid $color-gray;
-    z-index: 3;
-    top: 0;
-    left: 55px;
-    padding: 52px 45px;
-  }
-
-  &__about {
+    border-radius: 35px;
     display: flex;
-    align-items: center;
-    gap: 30px;
+    flex-direction: column;
+    gap: 50px;
+    color: $color-black;
+
+    &#cjmcard_1 {
+      background: $color-card3;
+      transform: rotate(-6deg);
+    }
+
+    &#cjmcard_2 {
+      position: absolute;
+      background: $color-card1;
+      transform: rotate(-4deg);
+      z-index: 2;
+      top: 0;
+      left: 25px;
+    }
+
+    &#cjmcard_3 {
+      position: absolute;
+      background: $color-white;
+      transform: rotate(-1deg);
+      border: 1px solid $color-gray;
+      z-index: 3;
+      top: 0;
+      left: 55px;
+      padding: 52px 45px;
+    }
+
+    &-about {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
 
     &-img {
       width: 69px;
@@ -678,35 +588,186 @@ body {
     &-position {
       font: $font-small-gilroy;
     }
-  }
 
-  &__sections {
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
-  }
-
-  &__section {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-
-    &-title {
-      font: $font-small-bold-gilroy;
+    &-sections {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
     }
 
-    &-line {
-      width: 100%;
-      height: 5px;
-      background-color: $color-card1;
+    &-section {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
 
-      &_90 {
-        width: 90%;
+      &-title {
+        font: $font-small-bold-gilroy;
       }
 
-      &_50 {
-        width: 50%;
+      &-line {
+        width: 100%;
+        height: 5px;
+        background-color: $color-card1;
+
+        &_90 {
+          width: 90%;
+        }
+
+        &_50 {
+          width: 50%;
+        }
       }
     }
+  }
+}
+
+.browser {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 7px;
+  width: 857px;
+  height: 42px;
+  background: $color-card1;
+  font: $font-small-gilroy;
+  border-radius: 6px;
+  padding: 14px 20px;
+  position: relative;
+  margin: 28px 0 48px;
+
+  &__text {
+    font: $font-browser;
+    color: $color-black;
+  }
+
+  &__lock {
+    width: 9px;
+    height: 13px;
+  }
+
+  &__reload {
+    width: 12px;
+    height: 14px;
+    margin-left: calc(50% - 58px);
+  }
+
+  &__cursor {
+    width: 25px;
+    height: 39px;
+    position: absolute;
+    top: 30px;
+    left: calc(50% + 41px);
+  }
+}
+
+.uxtest-summary {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  margin: 16px 0 138px;
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    letter-spacing: -0.5px;
+    padding-left: 42px;
+  }
+}
+
+.solution {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 36px;
+  padding: 36px 40px;
+  position: relative;
+  width: 420px;
+  min-height: 300px;
+  transform: rotate(-3deg);
+  background: $color-white;
+  border-radius: 25px;
+
+  &__title {
+    font: $font-small-smbold-gilroy;
+    color: $color-black;
+  }
+
+  &__text {
+    font: $font-small-gilroy;
+    color: $color-black;
+    line-height: 29px;
+    letter-spacing: -0.3px;
+  }
+
+  &__icon {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: -14px;
+    right: -14px;
+  }
+}
+
+.margin {
+  &--b10 {
+    margin-bottom: 10px;
+  }
+
+  &--b15 {
+    margin-bottom: 15px;
+  }
+
+  &--b20 {
+    margin-bottom: 20px;
+  }
+
+  &--b30 {
+    margin-bottom: 30px;
+  }
+
+  &--b50 {
+    margin-bottom: 50px;
+  }
+
+  &--b60 {
+    margin-bottom: 60px;
+  }
+
+  &--b70 {
+    margin-bottom: 70px;
+  }
+
+  &--b80 {
+    margin-bottom: 80px;
+  }
+
+  &--b90 {
+    margin-bottom: 90px;
+  }
+
+  &--b105 {
+    margin-bottom: 105px;
+  }
+
+  &--b165 {
+    margin-bottom: 165px;
+  }
+
+  &--b180 {
+    margin-bottom: 180px;
+  }
+}
+
+.padding {
+  &--l15 {
+    padding-left: 15px;
+  }
+
+  &--l20 {
+    padding-left: 20px;
+  }
+
+  &--r88 {
+    padding-right: 88px;
   }
 }
