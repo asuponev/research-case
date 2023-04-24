@@ -509,17 +509,25 @@ body {
 
     &-answer {
       display: flex;
+      align-items: center;
       gap: 10px;
 
-      input[type=radio] {
+      &-icon {
         width: 20px;
-        accent-color: $color-secondary;
-        cursor: pointer;
-        background-color: $color-card1;
-      }
+        height: 20px;
+        border: 1px solid $color-secondary;
+        border-radius: 50%;
+        background: inherit;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
-      label {
-        cursor: pointer;
+        &_checked {
+          width: 14.29px;
+          height: 14.29px;
+          border-radius: 50%;
+          background: $color-secondary;
+        }
       }
     }
   }
